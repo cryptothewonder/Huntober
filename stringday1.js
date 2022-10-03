@@ -10,6 +10,7 @@
 
 function fixString(x){
     let ans = x.split('')
+    let ans2 = ''
     for(let i=0; i<ans.length; i++){
         if(ans[i]==='0'){
             ans[i] = 'O'
@@ -32,7 +33,8 @@ function fixString(x){
         } else if(ans[i]==='9'){
             ans[i] = 'q'
         } 
-
-        return ans.join('')
     }
+    return ans.join('')
 }
+
+console.log(fixString('8008132'))
