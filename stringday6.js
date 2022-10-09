@@ -17,17 +17,25 @@
     
    
 
+// function day6Cypher(x,y){
+//     let ans = x.split('')
+    
+//     for (let i = 0; i<ans.length; i++){
+//         if(i === y){
+//             ans.shift(ans[i])
+//         }
+//     }
+//     return ans
+// }
 
-
-function day6Cypher(str,num){
-    ans = str.split('')
-    newNum = num
-    return ans.filter((x,y)=> {
-        if(y=0){}
-        y%newNum !== 0})
+function day6Cypher(x,y){
+   return x.split('').filter((c, i) => (i + 1) % y !== 0).join('')
 }
 
-console.log(day6Cypher('Hel3lo 4The4re Bud',4))
+
+
+
+console.log(day6Cypher('He3ll5o 4Th5eree 6Bugd', 3))
 
 // console.log('hello there'.split(''))
 
